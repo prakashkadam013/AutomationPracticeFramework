@@ -145,11 +145,10 @@ public class TestCase_File2 extends TestBase {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
 	
-	@Test(priority=39,enabled=false)
-	public void clickonShortSleeveimg1_37() throws InterruptedException {
+	@Test(priority=39)
+	public void clickonShortSleeveimg1_37() {
 		hp = new Homepage(driver);
 		hp.ClickonShortSleeveimg1Link();
-		Thread.sleep(15000);
 		
 		String ShortSleeveimg1title = driver.getTitle();
 		System.out.println(ShortSleeveimg1title);
@@ -158,8 +157,8 @@ public class TestCase_File2 extends TestBase {
 			Assert.assertTrue(true);
 			System.out.println("ShortSleeveimg1 is verified");
 		} else {
-			Assert.assertTrue(false);
 			System.out.println("ShortSleeveimg1 is not verified");
+			Assert.assertTrue(false);
 		}
 		driver.navigate().back();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

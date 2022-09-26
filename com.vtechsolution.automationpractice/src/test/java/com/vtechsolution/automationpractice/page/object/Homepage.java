@@ -263,7 +263,7 @@ public class Homepage {
 	}
 	
 	
-	@FindBy(xpath="//*[@id=\"homefeatured\"]/li[1]/div/div[1]/div/a[1]/img")    // Img 1   "//*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img"
+	@FindBy(xpath="//*[@id=\"homefeatured\"]/li[1]/div/div[1]/div/a[1]")    // Img 1   "//*[@id="homefeatured"]/li[1]/div/div[1]/div/a[1]/img"
 	WebElement ShortSleeveimg1;
 	
 	public boolean verifyShortSleeveimg1() {
@@ -271,10 +271,10 @@ public class Homepage {
 	}
 
 	public void ClickonShortSleeveimg1Link() {
-		Actions act = new Actions(driver);
-		act.moveToElement(ShortSleeveimg1).click().build().perform();
+	//	Actions act = new Actions(driver);
+	//	act.moveToElement(ShortSleeveimg1).click().build().perform();
 		
-	//	ShortSleeveimg1.click();
+		ShortSleeveimg1.click();
 	}
 	
 	@FindBy(xpath="//*[@id=\"homefeatured\"]/li[1]/div/div[1]/div/a[2]/span")
@@ -712,6 +712,9 @@ public class Homepage {
 		return bottomimg1.isDisplayed();
 	}
 
+	public void Clickonbottomimg1(){
+		bottomimg1.click();
+	}
 	
 	@FindBy(xpath="//*[@id=\"htmlcontent_home\"]/ul/li[2]/a/img")                  // bottomimg2
 	WebElement bottomimg2;
@@ -848,6 +851,10 @@ public class Homepage {
 		return CustomerBlocktext2.isDisplayed();
 	}
 	
+	public String getTxt() {
+		return CustomerBlocktext2.getText();
+	}
+	
 	@FindBy(xpath="//*[@id=\"editorial_image_legend\"]")                       // Subsidiary
 	WebElement Subsidiary;
 	
@@ -874,6 +881,10 @@ public class Homepage {
 	
 	public boolean verifyBottomtext() {
 		return Bottomtext.isDisplayed();
+	}
+	
+	public String getBottomtext() {
+		return Bottomtext.getText();
 	}
 	
 	@FindBy(xpath="//*[@id=\"newsletter_block_left\"]/h4")                     // NewsLetter
